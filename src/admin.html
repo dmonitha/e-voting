@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Add Candidates</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <head>
+      <style>
+          table { width: auto; }
+          table, th, td { border: solid 1px #DDD;
+              border-collapse: collapse; padding: 2px 3px; text-align: center;
+          }
+      </style>
+    </head>
+
+  <body>
+    <div class="container" style="width: 650px;">
+      <div class="row">
+        <div class="col-lg-12">
+          <h1 class="text-center">Manage Candidates</h1>
+          <hr/>
+          <br/>
+          <div id="loader">
+            <p class="text-center">Loading...</p>
+          </div>
+          <div id="content" style="display: none;">
+
+              <body onload="App.createTable()">
+                  <p>
+                      <input type="button" class="btn btn-primary" id="addRow" value="Add New Row" onclick="App.addRow()" />
+                  </p>
+                  <div id="cont"></div>   <!--the container to add the table.-->
+                  <br>
+                  <p><input type="button" class="btn btn-primary" id="bt" value="Submit Data" onclick="App.submit()" /></p>
+              </body>
+              <br>
+              <br>
+              <br>
+              <button><a href="http://127.0.0.1:8000/">Logout</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/web3.min.js"></script>
+    <script src="js/truffle-contract.js"></script>
+    <script src="js/admin.js"></script>
+  </body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Election</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  </head>
+  <body>
+    <div class="container" style="width: 650px;">
+      <div class="row">
+        <br>
+        <div class="col-lg-12">
+          <h1 id="Title" class="text-center"></h1>
+          <hr/>
+          <br/>
+          <div id="loader">
+            <p class="text-center">Loading...</p>
+          </div>
+          <div id="content" style="display: none;">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">ID</th>
+                  <th scope="col">Candidate Name</th>
+                  <th id="Votes" scope="col">Votes</th>
+                </tr>
+              </thead>
+              <tbody id="candidatesResults">
+              </tbody>
+            </table>
+            <hr/>
+            <form onSubmit="App.castVote(); return false;">
+              <div class="form-group">
+                <label for="candidatesSelect">Select Candidate</label>
+                <select class="form-control" id="candidatesSelect">
+                </select>
+              </div>
+              <button type="submit" class="btn btn-primary">Vote</button>
+              <hr />
+            </form>
+            <a href="http://127.0.0.1:8000/"><h3 id="Byline" class="text-center"></h3></a>
+            <br>
+            <p id="accountAddress" class="text-center"></p>
+            <br>
+            <h5 id="ClosingTime" class="text-center"></h5>
+            <h4 id="RemainingTime" class="text-center"></h4>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/web3.min.js"></script>
+    <script src="js/truffle-contract.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
